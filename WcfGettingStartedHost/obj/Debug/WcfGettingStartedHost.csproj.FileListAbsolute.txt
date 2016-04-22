@@ -1,8 +1,0 @@
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\bin\Debug\WcfGettingStartedHost.exe.config
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\bin\Debug\WcfGettingStartedHost.exe
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\bin\Debug\WcfGettingStartedHost.pdb
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\bin\Debug\WcfGettingStartedLibrary.dll
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\bin\Debug\WcfGettingStartedLibrary.pdb
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\obj\Debug\WcfGettingStartedHost.csprojResolveAssemblyReference.cache
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\obj\Debug\WcfGettingStartedHost.exe
-C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedHost\obj\Debug\WcfGettingStartedHost.pdb
