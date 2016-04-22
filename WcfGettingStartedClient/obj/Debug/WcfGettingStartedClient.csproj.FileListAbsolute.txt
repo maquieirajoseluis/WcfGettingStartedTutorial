@@ -1,0 +1,5 @@
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedClient\bin\Debug\WcfGettingStartedClient.exe.config
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedClient\bin\Debug\WcfGettingStartedClient.exe
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedClient\bin\Debug\WcfGettingStartedClient.pdb
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedClient\obj\Debug\WcfGettingStartedClient.exe
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedClient\obj\Debug\WcfGettingStartedClient.pdb

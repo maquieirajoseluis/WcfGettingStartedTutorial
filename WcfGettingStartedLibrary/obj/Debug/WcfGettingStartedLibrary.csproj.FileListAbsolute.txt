@@ -1,0 +1,6 @@
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedLibrary\bin\Debug\WcfGettingStartedLibrary.dll.config
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedLibrary\bin\Debug\WcfGettingStartedLibrary.dll
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedLibrary\bin\Debug\WcfGettingStartedLibrary.pdb
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedLibrary\obj\Debug\WcfGettingStartedLibrary.dll
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedLibrary\obj\Debug\WcfGettingStartedLibrary.pdb
+C:\Users\maquieirajoseluis\Documents\github\WcfGettingStartedTutorial\WcfGettingStartedLibrary\obj\Debug\WcfGettingStartedLibrary.csprojResolveAssemblyReference.cache
