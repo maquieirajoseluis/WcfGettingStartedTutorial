@@ -55,11 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\CalculatorServiceReference\CalculatorService.wsdl" />
-    <None Include="Service References\CalculatorServiceReference\item.xsd">
+    <None Include="Service References\CalculatorServiceReference\service.wsdl" />
+    <None Include="Service References\CalculatorServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CalculatorServiceReference\item1.xsd">
+    <None Include="Service References\CalculatorServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -68,9 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CalculatorServiceReference\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\CalculatorServiceReference\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CalculatorServiceReference\configuration91.svcinfo" />
