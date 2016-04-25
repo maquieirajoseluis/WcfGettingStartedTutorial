@@ -124,11 +124,11 @@
   </wsdl:binding>
   <wsdl:service name="CalculatorService">
     <wsdl:port name="NetNamedPipeBinding_ICalculator" binding="tns:NetNamedPipeBinding_ICalculator">
-      <soap12:address location="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService" />
+      <soap12:address location="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService</wsa10:Address>
+        <wsa10:Address>net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>JOSELUIS-PC\maquieirajoseluis</Upn>
+          <Dns>localhost</Dns>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
