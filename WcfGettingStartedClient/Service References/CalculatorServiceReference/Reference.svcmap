@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="afc50839-80c6-46c9-a05e-0a0478a68c71" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c2a000e-d551-4d3b-9823-5829858603ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,9 +22,9 @@
     <MetadataSource Address="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0c22e3bb-c8d1-490c-bcbf-7eb2123a1716" SourceId="1" SourceUrl="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="805ee494-9478-42af-b390-9c644006a064" SourceId="1" SourceUrl="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e5d40260-4550-434b-8b42-fbabca802ba4" SourceId="1" SourceUrl="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="977342a0-4629-47d2-91af-38b6be499636" SourceId="1" SourceUrl="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="2a9e0dff-a632-4cb5-8c0b-7ac9db0858a1" SourceId="1" SourceUrl="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="6a1252cf-26d4-4616-80d3-3de14a242c65" SourceId="1" SourceUrl="net.pipe://localhost/WcfGettingStartedTutorial/CalculatorService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
