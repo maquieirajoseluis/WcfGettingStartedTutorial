@@ -12,32 +12,39 @@ namespace WcfGettingStartedClient.CalculatorServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalculatorServiceReference.ICalculator")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CalculatorServiceReference.ICalculator", CallbackContract=typeof(WcfGettingStartedClient.CalculatorServiceReference.ICalculatorCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface ICalculator {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add", ReplyAction="http://tempuri.org/ICalculator/AddResponse")]
-        double Add(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Add")]
+        void Add(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Add", ReplyAction="http://tempuri.org/ICalculator/AddResponse")]
-        System.Threading.Tasks.Task<double> AddAsync(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Add")]
+        System.Threading.Tasks.Task AddAsync(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtract", ReplyAction="http://tempuri.org/ICalculator/SubtractResponse")]
-        double Subtract(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Subtract")]
+        void Subtract(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Subtract", ReplyAction="http://tempuri.org/ICalculator/SubtractResponse")]
-        System.Threading.Tasks.Task<double> SubtractAsync(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Subtract")]
+        System.Threading.Tasks.Task SubtractAsync(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply", ReplyAction="http://tempuri.org/ICalculator/MultiplyResponse")]
-        double Multiply(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Multiply")]
+        void Multiply(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Multiply", ReplyAction="http://tempuri.org/ICalculator/MultiplyResponse")]
-        System.Threading.Tasks.Task<double> MultiplyAsync(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Multiply")]
+        System.Threading.Tasks.Task MultiplyAsync(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Divide", ReplyAction="http://tempuri.org/ICalculator/DivideResponse")]
-        double Divide(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Divide")]
+        void Divide(double n1, double n2);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculator/Divide", ReplyAction="http://tempuri.org/ICalculator/DivideResponse")]
-        System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Divide")]
+        System.Threading.Tasks.Task DivideAsync(double n1, double n2);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ICalculatorCallback {
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICalculator/Equals")]
+        void Equals(string equation, double result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -46,56 +53,57 @@ namespace WcfGettingStartedClient.CalculatorServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CalculatorClient : System.ServiceModel.ClientBase<WcfGettingStartedClient.CalculatorServiceReference.ICalculator>, WcfGettingStartedClient.CalculatorServiceReference.ICalculator {
+    public partial class CalculatorClient : System.ServiceModel.DuplexClientBase<WcfGettingStartedClient.CalculatorServiceReference.ICalculator>, WcfGettingStartedClient.CalculatorServiceReference.ICalculator {
         
-        public CalculatorClient() {
+        public CalculatorClient(System.ServiceModel.InstanceContext callbackInstance) : 
+                base(callbackInstance) {
         }
         
-        public CalculatorClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+        public CalculatorClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName) : 
+                base(callbackInstance, endpointConfigurationName) {
         }
         
-        public CalculatorClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public CalculatorClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, string remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public CalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+        public CalculatorClient(System.ServiceModel.InstanceContext callbackInstance, string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, endpointConfigurationName, remoteAddress) {
         }
         
-        public CalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+        public CalculatorClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(callbackInstance, binding, remoteAddress) {
         }
         
-        public double Add(double n1, double n2) {
-            return base.Channel.Add(n1, n2);
+        public void Add(double n1, double n2) {
+            base.Channel.Add(n1, n2);
         }
         
-        public System.Threading.Tasks.Task<double> AddAsync(double n1, double n2) {
+        public System.Threading.Tasks.Task AddAsync(double n1, double n2) {
             return base.Channel.AddAsync(n1, n2);
         }
         
-        public double Subtract(double n1, double n2) {
-            return base.Channel.Subtract(n1, n2);
+        public void Subtract(double n1, double n2) {
+            base.Channel.Subtract(n1, n2);
         }
         
-        public System.Threading.Tasks.Task<double> SubtractAsync(double n1, double n2) {
+        public System.Threading.Tasks.Task SubtractAsync(double n1, double n2) {
             return base.Channel.SubtractAsync(n1, n2);
         }
         
-        public double Multiply(double n1, double n2) {
-            return base.Channel.Multiply(n1, n2);
+        public void Multiply(double n1, double n2) {
+            base.Channel.Multiply(n1, n2);
         }
         
-        public System.Threading.Tasks.Task<double> MultiplyAsync(double n1, double n2) {
+        public System.Threading.Tasks.Task MultiplyAsync(double n1, double n2) {
             return base.Channel.MultiplyAsync(n1, n2);
         }
         
-        public double Divide(double n1, double n2) {
-            return base.Channel.Divide(n1, n2);
+        public void Divide(double n1, double n2) {
+            base.Channel.Divide(n1, n2);
         }
         
-        public System.Threading.Tasks.Task<double> DivideAsync(double n1, double n2) {
+        public System.Threading.Tasks.Task DivideAsync(double n1, double n2) {
             return base.Channel.DivideAsync(n1, n2);
         }
     }

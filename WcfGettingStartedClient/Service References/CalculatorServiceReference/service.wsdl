@@ -42,43 +42,33 @@
   <wsdl:message name="ICalculator_Add_InputMessage">
     <wsdl:part name="parameters" element="tns:Add" />
   </wsdl:message>
-  <wsdl:message name="ICalculator_Add_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddResponse" />
-  </wsdl:message>
   <wsdl:message name="ICalculator_Subtract_InputMessage">
     <wsdl:part name="parameters" element="tns:Subtract" />
-  </wsdl:message>
-  <wsdl:message name="ICalculator_Subtract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SubtractResponse" />
   </wsdl:message>
   <wsdl:message name="ICalculator_Multiply_InputMessage">
     <wsdl:part name="parameters" element="tns:Multiply" />
   </wsdl:message>
-  <wsdl:message name="ICalculator_Multiply_OutputMessage">
-    <wsdl:part name="parameters" element="tns:MultiplyResponse" />
-  </wsdl:message>
   <wsdl:message name="ICalculator_Divide_InputMessage">
     <wsdl:part name="parameters" element="tns:Divide" />
   </wsdl:message>
-  <wsdl:message name="ICalculator_Divide_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DivideResponse" />
+  <wsdl:message name="ICalculator_Equals_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:Equals" />
   </wsdl:message>
-  <wsdl:portType name="ICalculator">
-    <wsdl:operation name="Add">
+  <wsdl:portType msc:usingSession="true" name="ICalculator">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Add">
       <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Add" message="tns:ICalculator_Add_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/AddResponse" message="tns:ICalculator_Add_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Subtract">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Subtract">
       <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Subtract" message="tns:ICalculator_Subtract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/SubtractResponse" message="tns:ICalculator_Subtract_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Multiply">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Multiply">
       <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Multiply" message="tns:ICalculator_Multiply_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/MultiplyResponse" message="tns:ICalculator_Multiply_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="Divide">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Divide">
       <wsdl:input wsaw:Action="http://tempuri.org/ICalculator/Divide" message="tns:ICalculator_Divide_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/DivideResponse" message="tns:ICalculator_Divide_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Equals">
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculator/Equals" message="tns:ICalculator_Equals_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetNamedPipeBinding_ICalculator" type="tns:ICalculator">
@@ -90,33 +80,27 @@
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Subtract">
       <soap12:operation soapAction="http://tempuri.org/ICalculator/Subtract" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Multiply">
       <soap12:operation soapAction="http://tempuri.org/ICalculator/Multiply" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="Divide">
       <soap12:operation soapAction="http://tempuri.org/ICalculator/Divide" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Equals">
+      <soap12:operation soapAction="http://tempuri.org/ICalculator/Equals" style="document" />
       <wsdl:output>
         <soap12:body use="literal" />
       </wsdl:output>

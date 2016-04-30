@@ -7,38 +7,47 @@ using System.Text;
 
 namespace WcfGettingStartedLibrary
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
     public class CalculatorService : ICalculator
     {
-        public double Add(double n1, double n2)
+        ICalculatorCallback Callback
+        {
+            get
+            {
+                return OperationContext.Current.GetCallbackChannel<ICalculatorCallback>();
+            }
+        }
+
+        public void Add(double n1, double n2)
         {
             double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
+            Console.WriteLine($"Received Add({n1},{n2})");
+            Console.WriteLine($"Return: {result}");
+            Callback.Equals($"Add({n1},{n2})", result);
         }
 
-        public double Subtract(double n1, double n2)
+        public void Subtract(double n1, double n2)
         {
             double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
+            Console.WriteLine($"Received Subtract({n1},{n2})");
+            Console.WriteLine($"Return: {result}");
+            Callback.Equals($"Subtract({n1},{n2})", result);
         }
 
-        public double Multiply(double n1, double n2)
+        public void Multiply(double n1, double n2)
         {
             double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
+            Console.WriteLine($"Received Multiply({n1},{n2})");
+            Console.WriteLine($"Return: {result}");
+            Callback.Equals($"Multiply({n1},{n2})", result);
         }
 
-        public double Divide(double n1, double n2)
+        public void Divide(double n1, double n2)
         {
             double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
+            Console.WriteLine($"Received Divide({n1},{n2})");
+            Console.WriteLine($"Return: {result}");
+            Callback.Equals($"Divide({n1},{n2})", result);
         }
     }
 }
