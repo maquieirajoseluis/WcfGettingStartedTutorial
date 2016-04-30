@@ -22,7 +22,7 @@ namespace WcfGettingStartedHost
             try
             {
                 // Step 3 Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
+                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSDualHttpBinding(), "CalculatorService");
 
                 // Step 4 Enable metadata exchange.
                 ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
